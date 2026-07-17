@@ -1,9 +1,9 @@
 # Parameter-Isolated Experts for the 11th ABAW Multi-Task Challenge
 
-Solution code for our submission to the **Multi-Task Learning (MTL) track of the
+Solution code for our submission [(Link)](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing) to the **Multi-Task Learning (MTL) track of the
 11th ABAW Competition (ECCV 2026)** on s-Aff-Wild2: joint valence–arousal
 estimation, 8-class expression recognition, and 12-way action-unit detection from
-a single cropped face. [Link](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing)
+a single cropped face. 
 
 ## Installation
 
