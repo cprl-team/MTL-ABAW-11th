@@ -1,0 +1,35 @@
+seed: 0
+dataset_name: rafdb_basic
+protocol: official_partition
+data:
+  dataset: rafdb
+  data_dir: data/RAF-DB
+  labels: basic/EmoLabel/list_patition_label.txt
+  img_size: 224
+  augment: standard
+model:
+  backbone: dinov2
+  init_backbone_from: runs/an_dinov2/best.pt
+  freeze_backbone: false
+  head_hidden: 0
+  dropout: 0.1
+train:
+  epochs: 10
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  num_workers: 6
+  amp: true
+  lr_schedule: cosine
+  class_weighting: true
+  uncertainty_weighting: true
+  expr_loss: focal
+  focal_gamma: 2.0
+  sampler: balanced_expr
+  au_threshold: 0.5
+  calibrate_au: false
+  finetune:
+    freeze_frac: 0.6
+    warmup_epochs: 1
+    backbone_lr_mult: 0.1
+    ema: true

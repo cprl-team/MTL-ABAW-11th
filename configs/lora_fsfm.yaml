@@ -1,0 +1,39 @@
+seed: 0
+dataset_name: affectnet8
+protocol: official_split
+data:
+  dataset: affectnet
+  data_dir: data/affectnet
+  manifest: aligned_112_manifest.csv
+  img_size: 224
+  augment: standard
+model:
+  backbone: fsfm
+  weights_path: weights/fsfm_vitb_vf2_600e.pth
+  init_backbone_from: runs/fsfm_anft_ms/seed_0/best.pt
+  lora:
+    rank: 16
+    alpha: 32
+  freeze_backbone: false
+  head_hidden: 0
+  dropout: 0.1
+train:
+  epochs: 2
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  num_workers: 6
+  amp: true
+  lr_schedule: cosine
+  class_weighting: true
+  uncertainty_weighting: true
+  expr_loss: focal
+  focal_gamma: 2.0
+  sampler: balanced_expr
+  au_threshold: 0.5
+  calibrate_au: false
+  finetune:
+    freeze_frac: 0.6
+    warmup_epochs: 0
+    backbone_lr_mult: 1.0
+    ema: true

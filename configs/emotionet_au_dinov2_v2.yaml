@@ -1,0 +1,32 @@
+seed: 0
+dataset_name: emotionet_au
+protocol: random_split
+data:
+  dataset: emotionet
+  data_dir: data/emotionnet
+  csv: EmotioNet_FACS_aws_2020_24600.csv
+  img_size: 224
+  augment: standard
+model:
+  backbone: dinov2
+  init_backbone_from: runs/rafdb_dinov2/best.pt
+  freeze_backbone: false
+  head_hidden: 0
+  dropout: 0.1
+train:
+  epochs: 5
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  num_workers: 6
+  amp: true
+  lr_schedule: cosine
+  class_weighting: false
+  uncertainty_weighting: true
+  au_threshold: 0.5
+  calibrate_au: false
+  finetune:
+    freeze_frac: 0.6
+    warmup_epochs: 1
+    backbone_lr_mult: 0.1
+    ema: true

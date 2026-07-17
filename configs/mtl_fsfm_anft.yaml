@@ -1,0 +1,37 @@
+seed: 0
+dataset_name: s-aff-wild2-mtl
+protocol: official_split
+data:
+  data_dir: data/mtl-abaw
+  train_ann: training_set_annotations.txt
+  val_ann: validation_set_annotations.txt
+  image_subdir: cropped_aligned
+  img_size: 224
+  augment: standard
+model:
+  backbone: fsfm
+  weights_path: weights/fsfm_vitb_vf2_600e.pth
+  init_backbone_from: runs/an_base/best.pt
+  freeze_backbone: false
+  head_hidden: 0
+  dropout: 0.1
+train:
+  epochs: 3
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  num_workers: 6
+  amp: true
+  lr_schedule: cosine
+  class_weighting: true
+  uncertainty_weighting: true
+  expr_loss: focal
+  focal_gamma: 2.0
+  sampler: balanced_expr
+  au_threshold: 0.5
+  calibrate_au: true
+  finetune:
+    freeze_frac: 0.6
+    warmup_epochs: 1
+    backbone_lr_mult: 0.1
+    ema: true
