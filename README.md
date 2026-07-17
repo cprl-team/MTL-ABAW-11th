@@ -3,7 +3,7 @@
 Solution code for our submission to the **Multi-Task Learning (MTL) track of the
 11th ABAW Competition (ECCV 2026)** on s-Aff-Wild2: joint valence–arousal
 estimation, 8-class expression recognition, and 12-way action-unit detection from
-a single cropped face. 
+a single cropped face. [Link](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing)
 
 ## Installation
 
@@ -39,7 +39,7 @@ then cached as features on which lightweight temporal heads train. Stages
 
 ## Citation
 
-If you use this code, please cite our pre-print and the ABAW challenge:
+If you use this code, please cite our [pre-print](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing) and the ABAW challenge:
 
 ```bibtex
 @misc{[VERIFY:key],
