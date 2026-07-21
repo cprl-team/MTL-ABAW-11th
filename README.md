@@ -46,6 +46,7 @@ If you use this code, please cite our [pre-print](https://arxiv.org/abs/2607.162
   title  = {Strength-Parity Ensembling with Parameter-Isolated Experts for Multi-Task Affect Recognition},
   author = {Bui, Tung Hung and Nguyen, Hong Hai and Huynh, Van Thong},
   year   = {2026},
+  doi= {10.48550/arXiv.2607.16290}
   note   = {arXiv pre-print}
   url= {https://arxiv.org/abs/2607.16290},
 }
