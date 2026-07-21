@@ -1,6 +1,6 @@
 # Parameter-Isolated Experts for the 11th ABAW Multi-Task Challenge
 
-Solution code for our submission [(Link)](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing) to the **Multi-Task Learning (MTL) track of the
+Solution code for our submission [(Link)](https://arxiv.org/abs/2607.16290) to the **Multi-Task Learning (MTL) track of the
 11th ABAW Competition (ECCV 2026)** on s-Aff-Wild2: joint valence–arousal
 estimation, 8-class expression recognition, and 12-way action-unit detection from
 a single cropped face. 
@@ -39,14 +39,16 @@ then cached as features on which lightweight temporal heads train. Stages
 
 ## Citation
 
-If you use this code, please cite our [pre-print](https://drive.google.com/file/d/117jrTXFloZb2R3-mdzyUjlho9VJUkMsr/view?usp=sharing) and the ABAW challenge:
+If you use this code, please cite our [pre-print](https://arxiv.org/abs/2607.16290) and the ABAW challenge:
 
 ```bibtex
-@misc{[VERIFY:key],
+@misc{cprABAW11thmtl,
   title  = {Strength-Parity Ensembling with Parameter-Isolated Experts for Multi-Task Affect Recognition},
-  author = {Nguyen, Hong Hai and Huynh, Van Thong},
+  author = {Bui, Tung Hung and Nguyen, Hong Hai and Huynh, Van Thong},
   year   = {2026},
   note   = {arXiv pre-print}
+  url= {https://arxiv.org/abs/2607.16290},
+}
 ```
 
 Please also cite the ABAW challenge papers as required by the organizers (see the
